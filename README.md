@@ -13,4 +13,4 @@ int main(){
   }
 }
 ```
-In this example you got some data that gets loaded onto the heap, and then you can press enter to load more data, the problem is that that old data doesn't get freed from the heap, thus just piling up, causing a memory leak, which as mentioned before is bad.
+In this example you got some data that gets loaded onto the heap, and then you can press enter to load more data, the problem is that that old data doesn't get freed from the heap, thus just piling up, causing a memory leak, which as mentioned before is bad. I think that the pink textures result from Minecraft trying to allocate more space on the heap for the data, but not having enough due to all of the leaked data hogging up all of the memory. This thus results in the textures being pink instead since they wouldn't have been allocated if that's what happened.
